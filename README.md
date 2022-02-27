@@ -134,22 +134,20 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_ami"></a> [ami](#input\_ami) | n/a | `string` | `"ami-074251216af698218"` | no |
-| <a name="input_associate_public_ip_address"></a> [associate\_public\_ip\_address](#input\_associate\_public\_ip\_address) | n/a | `bool` | `false` | no |
-| <a name="input_availability_zone"></a> [availability\_zone](#input\_availability\_zone) | n/a | `string` | `"us-west-2a"` | no |
-| <a name="input_aws_region"></a> [aws\_region](#input\_aws\_region) | n/a | `string` | `"us-west-2"` | no |
+| <a name="input_ami"></a> [ami](#input\_ami) | AMI Id | `string` | `"ami-074251216af698218"` | no |
+| <a name="input_associate_public_ip_address"></a> [associate\_public\_ip\_address](#input\_associate\_public\_ip\_address) | Whether to associate a public IP address with an instance in a VPC | `bool` | `false` | no |
 | <a name="input_default_sgs"></a> [default\_sgs](#input\_default\_sgs) | n/a | `list(string)` | `null` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | n/a | `string` | `"dev"` | no |
-| <a name="input_ingress_22_cidr_blocks"></a> [ingress\_22\_cidr\_blocks](#input\_ingress\_22\_cidr\_blocks) | n/a | `list(string)` | n/a | yes |
-| <a name="input_ingress_8080_cidr_blocks"></a> [ingress\_8080\_cidr\_blocks](#input\_ingress\_8080\_cidr\_blocks) | n/a | `list(string)` | <pre>[<br>  ""<br>]</pre> | no |
-| <a name="input_ingress_80_cidr_blocks"></a> [ingress\_80\_cidr\_blocks](#input\_ingress\_80\_cidr\_blocks) | n/a | `list(string)` | <pre>[<br>  ""<br>]</pre> | no |
-| <a name="input_instance_name"></a> [instance\_name](#input\_instance\_name) | n/a | `any` | n/a | yes |
-| <a name="input_instance_type"></a> [instance\_type](#input\_instance\_type) | n/a | `string` | `"t2.micro"` | no |
-| <a name="input_key_name"></a> [key\_name](#input\_key\_name) | n/a | `any` | `null` | no |
-| <a name="input_sg_ingress_8080_allow"></a> [sg\_ingress\_8080\_allow](#input\_sg\_ingress\_8080\_allow) | n/a | `bool` | `false` | no |
-| <a name="input_sg_ingress_80_allow"></a> [sg\_ingress\_80\_allow](#input\_sg\_ingress\_80\_allow) | n/a | `bool` | `false` | no |
-| <a name="input_subnet_type"></a> [subnet\_type](#input\_subnet\_type) | n/a | `string` | `"private"` | no |
-| <a name="input_user_data"></a> [user\_data](#input\_user\_data) | n/a | `any` | `null` | no |
+| <a name="input_environment"></a> [environment](#input\_environment) | Environment Name | `string` | `"dev"` | no |
+| <a name="input_ingress_22_cidr_blocks"></a> [ingress\_22\_cidr\_blocks](#input\_ingress\_22\_cidr\_blocks) | CIDR Range for SSH Port (22) | `list(string)` | n/a | yes |
+| <a name="input_ingress_8080_cidr_blocks"></a> [ingress\_8080\_cidr\_blocks](#input\_ingress\_8080\_cidr\_blocks) | CIDR Range for Jenkins (8080)| `list(string)` | <pre>[<br>  ""<br>]</pre> | no |
+| <a name="input_ingress_80_cidr_blocks"></a> [ingress\_80\_cidr\_blocks](#input\_ingress\_80\_cidr\_blocks) | CIDR Range for Application Port (80) | `list(string)` | <pre>[<br>  ""<br>]</pre> | no |
+| <a name="input_instance_name"></a> [instance\_name](#input\_instance\_name) | Instance's Name | `any` | n/a | yes |
+| <a name="input_instance_type"></a> [instance\_type](#input\_instance\_type) | Instance's Type | `string` | `"t2.micro"` | no |
+| <a name="input_key_name"></a> [key\_name](#input\_key\_name) | Key Pair Name | `any` | `null` | no |
+| <a name="input_sg_ingress_8080_allow"></a> [sg\_ingress\_8080\_allow](#input\_sg\_ingress\_8080\_allow) | Enable port 8080 | `bool` | `false` | no |
+| <a name="input_sg_ingress_80_allow"></a> [sg\_ingress\_80\_allow](#input\_sg\_ingress\_80\_allow) | Enable port 80 | `bool` | `false` | no |
+| <a name="input_subnet_type"></a> [subnet\_type](#input\_subnet\_type) | Subnet type. private or public | `string` | `"private"` | no |
+| <a name="input_user_data"></a> [user\_data](#input\_user\_data) | Custom user data script | `any` | `null` | no |
 
 
 ## Outputs
@@ -165,7 +163,7 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_id"></a> [id](#output\_id) | The ID of the instance |
-| <a name="output_private_ip"></a> [private\_ip](#output\_private\_ip) | The private IP address assigned to the instance. |
-| <a name="output_public_ip"></a> [public\_ip](#output\_public\_ip) | The public IP address assigned to the instance, if applicable. NOTE: If you are using an aws\_eip with your instance, you should refer to the EIP's address directly and not use `public_ip` as this field will change after the EIP is attached |
+| <a name="output_id"></a> [id](#output\_id) | Instance's AMI Id |
+| <a name="output_private_ip"></a> [private\_ip](#output\_private\_ip) | Instance's Private IP Address. |
+| <a name="output_public_ip"></a> [public\_ip](#output\_public\_ip) | Instance's Public IP |
 <!-- END_TF_DOCS -->
