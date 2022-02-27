@@ -15,7 +15,7 @@ variable availability_zone {
 }
 
 variable user_data {
-
+    default = null
 }
 
 variable associate_public_ip_address {
@@ -25,7 +25,7 @@ variable instance_name {
 
 }
 variable environment {
-
+    default = "dev"
 }
 
 variable "default_sgs" {
@@ -33,9 +33,9 @@ variable "default_sgs" {
   default = null
 }
 
-variable subnet_id {
-
-}
+ variable subnet_type {
+    default = "private"
+ }
 
 variable key_name {
     default = null
@@ -43,4 +43,22 @@ variable key_name {
 variable ingress_22_cidr_blocks {
     type = list(string)
 
+}
+variable "sg_ingress_8080_allow" {
+    default = false
+  
+}
+variable "ingress_8080_cidr_blocks" {
+    type = list(string)
+    default = [ "" ]
+
+}
+variable "ingress_80_cidr_blocks" {
+    type = list(string)
+    default = [""]
+  
+}
+variable "sg_ingress_80_allow" {
+    default = false
+  
 }

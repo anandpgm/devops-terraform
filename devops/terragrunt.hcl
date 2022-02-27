@@ -2,10 +2,10 @@
 remote_state {
   backend = "s3"
   config = {
-    encrypt = true
-    bucket = "${get_aws_account_id()}-terraform-remote-state-storage"
-    key = "${path_relative_to_include()}/terraform.tfstate"
-    region = "us-west-2"
+    encrypt        = true
+    bucket         = "${get_aws_account_id()}-terraform-remote-state-storage"
+    key            = "${path_relative_to_include()}/terraform.tfstate"
+    region         = "us-west-2"
     dynamodb_table = "terraform_locks"
   }
 }

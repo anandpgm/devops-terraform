@@ -14,5 +14,5 @@ include {
 }
 
 inputs = {
-  cidr_block = "172.20.0.0/16"
+  cidr_block = "172.20.0.0/16"  // VPC CiDR Block
 }
