@@ -14,7 +14,6 @@ data "terraform_remote_state" "subnet" {
   backend = "s3"
   config = {
     bucket = local.remote_state_s3_bucket
-    #key = var.remote_vpc_s3_key
     key = "terraform/global/network/terraform.tfstate"
     region = "us-west-2"
   }

@@ -129,7 +129,6 @@ No modules.
 | <a name="input_public_subnet"></a> [public\_subnet](#input\_public\_subnet) | Public Subnet Range | `string` | `"172.20.10.0/24"` | no |
 | <a name="input_ami"></a> [ami](#input\_ami) | AMI Id | `string` | `"ami-074251216af698218"` | no |
 | <a name="input_associate_public_ip_address"></a> [associate\_public\_ip\_address](#input\_associate\_public\_ip\_address) | Whether to associate a public IP address with an instance in a VPC | `bool` | `false` | no |
-| <a name="input_default_sgs"></a> [default\_sgs](#input\_default\_sgs) | n/a | `list(string)` | `null` | no |
 | <a name="input_environment"></a> [environment](#input\_environment) | Environment Name | `string` | `"dev"` | no |
 | <a name="input_ingress_22_cidr_blocks"></a> [ingress\_22\_cidr\_blocks](#input\_ingress\_22\_cidr\_blocks) | CIDR Range for SSH Port (22) | `list(string)` | n/a | yes |
 | <a name="input_ingress_8080_cidr_blocks"></a> [ingress\_8080\_cidr\_blocks](#input\_ingress\_8080\_cidr\_blocks) | CIDR Range for Jenkins (8080)| `list(string)` | <pre>[<br>  ""<br>]</pre> | no |
