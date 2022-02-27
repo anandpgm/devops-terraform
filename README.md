@@ -46,7 +46,7 @@ Where:
 
 * **Environment**: Within each region, there will be one or more "environments", such as `dev`, `staging`, `pro`, etc. Typically,
   an environment will correspond to a single [AWS Virtual Private Cloud (VPC)](https://aws.amazon.com/vpc/), which
-  isolates that environment from everything else in that AWS account. There may also be a `_global` folder
+  isolates that environment from everything else in that AWS account. There may also be a `global` folder
   that defines resources that are available across all the environments in this AWS region, such as Route 53 A records,
   SNS topics, IAM Roles and ECR repos.
 
