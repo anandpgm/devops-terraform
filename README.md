@@ -107,9 +107,6 @@ No modules.
 | [aws_subnet.private_subnet](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet) | resource |
 | [aws_subnet.public_subnet](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet) | resource |
 | [aws_vpc.myvpc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc) | resource |
-
-| Name | Type |
-|------|------|
 | [aws_instance.ec2](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance) | resource |
 | [aws_security_group.sg](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group) | resource |
 | [aws_security_group_rule.allow_all](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule) | resource |
@@ -130,10 +127,6 @@ No modules.
 | <a name="input_instance_tenancy"></a> [instance\_tenancy](#input\_instance\_tenancy) | n/a | `string` | `"default"` | no |
 | <a name="input_private_subnet"></a> [private\_subnet](#input\_private\_subnet) | Private Subnet Range | `string` | `"172.20.20.0/24"` | no |
 | <a name="input_public_subnet"></a> [public\_subnet](#input\_public\_subnet) | Public Subnet Range | `string` | `"172.20.10.0/24"` | no |
-
-
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
 | <a name="input_ami"></a> [ami](#input\_ami) | AMI Id | `string` | `"ami-074251216af698218"` | no |
 | <a name="input_associate_public_ip_address"></a> [associate\_public\_ip\_address](#input\_associate\_public\_ip\_address) | Whether to associate a public IP address with an instance in a VPC | `bool` | `false` | no |
 | <a name="input_default_sgs"></a> [default\_sgs](#input\_default\_sgs) | n/a | `list(string)` | `null` | no |
@@ -160,9 +153,6 @@ No modules.
 | <a name="output_public_subnet_id"></a> [public\_subnet\_id](#output\_public\_subnet\_id) | Public Subnet ID |
 | <a name="output_vpc_cidr_block"></a> [vpc\_cidr\_block](#output\_vpc\_cidr\_block) | The CIDR block of the VPC |
 | <a name="output_vpc_id"></a> [vpc\_id](#output\_vpc\_id) | VPC ID associated with VPC |
-
-| Name | Description |
-|------|-------------|
 | <a name="output_id"></a> [id](#output\_id) | Instance's AMI Id |
 | <a name="output_private_ip"></a> [private\_ip](#output\_private\_ip) | Instance's Private IP Address. |
 | <a name="output_public_ip"></a> [public\_ip](#output\_public\_ip) | Instance's Public IP |
