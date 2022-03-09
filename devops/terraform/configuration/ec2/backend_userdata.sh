@@ -9,7 +9,7 @@ apt-get update
 sleep 60
 echo ">>>>>>>>>>>>>>>>>>>>>>>>>>> install python and create ansible user>>>>>>"
 
-apt install python$PYTHON_VERSION python-pip -y
+apt install python$PYTHON_VERSION python-pip python-docker -y
 adduser $ANSIBLE_USER
 usermod -aG sudo $ANSIBLE_USER
 echo "$ANSIBLE_USER ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers

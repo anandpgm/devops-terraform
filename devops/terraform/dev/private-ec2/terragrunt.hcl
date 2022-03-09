@@ -16,6 +16,7 @@ include {
 inputs = {
 
   instance_name               = "Private-Instance"
+  instance_type               = "t2.large" 
   subnet_type                 = "private"
   ingress_22_cidr_blocks      = ["172.20.0.0/16"]
   sg_ingress_80_allow         = true
